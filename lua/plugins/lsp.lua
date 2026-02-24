@@ -27,6 +27,28 @@ return {
       { "gt", vim.lsp.buf.type_definition, desc = "Goto Type Definition" },
     },
     opts = {
+      servers = {
+        harper_ls = {
+          settings = {
+            ["harper-ls"] = {
+              linters = {
+                spell_check = true,
+                spelled_numbers = false,
+                an_a = true,
+                sentence_capitalization = true,
+                unclosed_quotes = true,
+                wrong_quotes = false,
+                long_sentences = true,
+                repeated_words = true,
+                spaces = true,
+                matcher = true,
+              },
+            },
+          },
+        },
+        lemminx = {},
+        bashls = {},
+      },
       inlay_hints = { enabled = false },
       diagnostics = {
         float = { border = vim.g.border },
